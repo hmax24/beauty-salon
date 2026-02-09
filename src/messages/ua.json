@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Головна",
+    "services": "Послуги",
+    "contacts": "Контакти"
+  },
+  "services": {
+    "title": "Послуги"
+  },
+  "contacts": {
+    "title": "Контакти"
+  }
+}
