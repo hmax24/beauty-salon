@@ -2,6 +2,13 @@
   "nav": {
     "home": "Home",
     "services": "Diensten",
-    "contacts": "Contact"
+    "contacts": "Contact",
+    "booking": "Reserveren"
+  },
+   "services": {
+    "title": "Services"
+  },
+  "contacts": {
+    "title": "Contact"
   }
 }

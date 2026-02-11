@@ -2,7 +2,8 @@
   "nav": {
     "home": "Головна",
     "services": "Послуги",
-    "contacts": "Контакти"
+    "contacts": "Контакти",
+    "booking": "Запис"
   },
   "services": {
     "title": "Послуги"

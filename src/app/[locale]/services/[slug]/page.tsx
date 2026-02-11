@@ -55,7 +55,7 @@ export default async function ServiceOrOfferPage({ params }: Props) {
 
         <div className="mt-8 flex gap-3">
           <Link
-            href={withLocale(l, "/contacts")}
+            href={bookingHref(l, slug)}
             className="inline-flex items-center justify-center rounded-lg bg-black px-4 py-2 text-white text-sm hover:opacity-90 transition"
           >
             Book now
@@ -78,10 +78,16 @@ export default async function ServiceOrOfferPage({ params }: Props) {
     notFound();
   }
 
-  const includedServices = getServicesBySlugs(offer.serviceSlugs).filter(Boolean);
+  const includedServices = getServicesBySlugs(offer.serviceSlugs).filter(
+    Boolean,
+  );
   const duration = calcOfferDurationMinutes(offer);
   const base = calcOfferBasePrice(offer);
   const final = calcOfferFinalPrice(offer);
+
+  function bookingHref(locale: AppLocale, slug: string) {
+    return withLocale(locale, `/booking?slug=${encodeURIComponent(slug)}`);
+  }
 
   return (
     <div className="max-w-3xl">
@@ -151,7 +157,7 @@ export default async function ServiceOrOfferPage({ params }: Props) {
 
       <div className="mt-8 flex gap-3">
         <Link
-          href={withLocale(l, "/contacts")}
+          href={bookingHref(l, slug)}
           className="inline-flex items-center justify-center rounded-lg bg-black px-4 py-2 text-white text-sm hover:opacity-90 transition"
         >
           Book now
